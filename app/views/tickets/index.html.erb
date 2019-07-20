@@ -14,9 +14,11 @@
     <% @tickets.each do |ticket| %>
       <tr>
         <td><%= ticket.price %></td>
-        <td><%= link_to 'Show', ticket %></td>
-        <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
-        <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td><%= link_to 'Show', ticket, class: "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_ticket_path(ticket), class: "btn btn-outline-warning" %></td>
+        <td><%= link_to 'Destroy', ticket, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
       </tr>
     <% end %>
   </tbody>

@@ -1,20 +1,9 @@
-<%= form_with(model: ticket, local: true) do |form| %>
-  <% if ticket.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+<%= simple_form_for ticket do |form| %>
+  <%= form.error_notification %>
 
-      <ul>
-      <% ticket.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= form.input :price %>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
-  </div>
+  <%= form.association :events %>
 
   <div class="actions">
     <%= form.submit %>

@@ -1,4 +1,9 @@
 FactoryBot.define do
+  factory :purchase do
+    ticket { nil }
+    user { nil }
+  end
+
   factory :user do
     
   end

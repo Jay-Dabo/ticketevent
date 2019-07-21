@@ -1,4 +1,8 @@
 FactoryBot.define do
+  factory :user do
+    
+  end
+
   factory :event do
       name { "Michael Oldfield" }
       event_time { "2019-09-19 07:03:30 -0700" }

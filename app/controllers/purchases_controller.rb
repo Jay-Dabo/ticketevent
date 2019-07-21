@@ -1,13 +1,13 @@
-class PurchaseController < ApplicationController
+class PurchasesController < ApplicationController
   before_action :find_ticket
 
   def create
     if already_bought?
       flash[:notice] = "Already sold!"
     else
-      @ticket.purchases.create(user_id: current_user.id)
+      @ticket.create_purchase(user_id: current_user.id)
     end
-    redirect_to event_path(@event)
+    redirect_to ticket_path(@ticket)
   end
 
   private

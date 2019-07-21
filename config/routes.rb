@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   end
 
   root 'events#index'
-  resources :tickets
+  resources :tickets do
+    resources :purchases
+  end
   resources :events
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -10,5 +10,13 @@
   <%= @event.event_time %>
 </p>
 
+<p>
+  <strong>Tickets to purchase [EUR]:</strong>
+  <% @event.tickets.map do |ticket| %>
+    <br>
+    <%= ticket.price %> <%= link_to 'Buy', ticket, class: "btn btn-info" %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

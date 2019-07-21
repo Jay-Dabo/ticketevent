@@ -2,5 +2,5 @@ class Event < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :name, length: { in: 10..40 }
 
-  has_many :tickets
+  has_many :tickets, dependent: :destroy
 end

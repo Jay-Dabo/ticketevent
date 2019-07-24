@@ -26,9 +26,14 @@ $ bundle install
 # Enter postgres:
 $ sudo -i -u postgres psql
 
+# Create a user:
+create user "ticketevent" with password 'ticketevent';
+
 # Create a database:
 create database "ticketevent_development" owner 'ticketevent';
 
+# Run migrations:
+$ rake db:migrate
 ```
 
 

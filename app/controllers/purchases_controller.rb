@@ -6,9 +6,9 @@ class PurchasesController < ApplicationController
       flash[:notice] = "Already sold!"
     else
       @ticket.create_purchase(user_id: current_user.id)
+      flash[:notice] = "Ticket successfully purchased!"
     end
-    redirect_to ticket_path(@ticket)
-    flash[:notice] = "Ticket successfully purchased!"
+    redirect_to ticket_path(@ticket)    
   end
 
   private

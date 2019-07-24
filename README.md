@@ -1,6 +1,6 @@
 # TICKETEVENT
 
-A simple application for creating events (e.g. concerts) and purchasing tickets fro said events.
+A simple application for creating events (e.g. concerts) and purchasing tickets for said events.
 
 
 ## Installation:
@@ -51,6 +51,8 @@ localhost:3000
 The majority of app features is available without being logged in. Although in order to use all of them you'd need to register (input data is being stored in **ticketevent_development** database in **users** table) and log in.
 
 Now you can create an event (**events** table in **ticketevent_development** database). Once an event is created you can create a ticket for it (**tickets** table). Created ticket is available for a purchase.
+
+Purchases are recorded in a joined table between Ticket and User models.
 
 **TL&DR:**
 <br>

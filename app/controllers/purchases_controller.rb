@@ -8,6 +8,7 @@ class PurchasesController < ApplicationController
       @ticket.create_purchase(user_id: current_user.id)
     end
     redirect_to ticket_path(@ticket)
+    flash[:notice] = "Ticket successfully purchased!"
   end
 
   private

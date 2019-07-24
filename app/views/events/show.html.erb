@@ -11,10 +11,10 @@
 </p>
 
 <p>
-  <strong>Tickets to purchase [EUR]:</strong>
+  <strong>Tickets to purchase:</strong>
   <% @event.tickets.map do |ticket| %>
     <br>
-    <%= ticket.price %> <%= link_to 'Proceed to buy', ticket, class: "btn btn-info" %>
+    <%= ticket.price %> € <%= link_to 'Proceed to buy', ticket, class: "btn btn-info" %>
   <% end %>
 </p>
 

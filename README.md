@@ -61,7 +61,12 @@ Purchases are recorded in a joined table between Ticket and User models.
 
 **TL&DR:**
 <br>
-Only a logged in user can purchase a ticket.
+1. Create an event.
+2. Create a ticket.
+3. Register and log in.
+4. Select and event and click 'Show'.
+5. Click 'Proceed to buy' (GET ticket/id).
+6. Click 'Buy' (only a logged in user can purchase a ticket).
 
 
 ## List of buttons and what they do (HTTP actions):

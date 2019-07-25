@@ -12,7 +12,10 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @ticket.price %> € <%= button_to 'Buy', ticket_purchases_path(@ticket), method: :ticket %>
+  <%= @ticket.price %> €
+  <% if current_user %>
+    <%= button_to 'Buy', ticket_purchases_path(@ticket), method: :ticket %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_ticket_path(@ticket) %> |
